@@ -137,7 +137,7 @@ Plots are saved in `code/result/run_003/plots/`:
 
 | Model Type                     | Params     | Param Scale | Test Accuracy | Test F1   | Source |
 |--------------------------------|-----------:|------------:|--------------:|----------:|:-------|
-| **MultiBranchNet (this work)** | **7,210**  | 7k          | **98.56%**    | **0.9856**| run_003 (this repo) |
+| **MultiBranchNet (this repo)** | **7,210**  | 7k          | **98.56%**    | **0.9856**| run_003 (this repo) |
 | Simple MLP (2-layers)          | ~100,000   | 100k        | ~98%          | ~0.98     | [Arm PyTorch Example][1] |
 | Basic CNN (LeNet-5 variant)    | 60k–200k   | 60–200k     | ~99%          | ~0.99     | [ChanMeng666][2], [Colab][3] |
 | Deep CNN                       | >1,000,000 | >1M         | >99.5%        | 0.99–0.995| [GeeksforGeeks][4], [Nextjournal][5] |
@@ -155,7 +155,7 @@ Plots are saved in `code/result/run_003/plots/`:
 ### Brief Comparison
 
 - **Parameter Efficiency:** MultiBranchNet achieves nearly state-of-the-art F1 and accuracy with only ~7k parameters, far fewer than classic MLPs or CNNs.
-- **Performance:** The F1 score and accuracy closely match those of much larger models, validating the efficiency of your parallel-branch design.
+- **Performance:** The F1 score and accuracy closely match those of much larger models, validating the efficiency of the parallel-branch design.
 - **Literature Comparison:** Most published MNIST models use tens or hundreds of thousands of parameters for similar scores. Deep CNNs reach slightly higher F1/accuracy (0.99+), but with much higher parameter counts.
 
 ---
