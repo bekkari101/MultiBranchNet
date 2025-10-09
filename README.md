@@ -10,6 +10,17 @@ Inspired by multi-branch network ideas such as GoogLeNet/Inception modules discu
 
 **Quick results:** best run `run_003` (dated 2025-10-09): 7,210 trainable parameters — 98.56% test accuracy (F1 = 0.9856).
 
+### Demo Video
+
+<video src="video/NeuralNetworkVisualization.mp4" controls width="640">
+  Your browser does not support the video tag.
+  <a href="video/NeuralNetworkVisualization.mp4">Watch the video</a>.
+
+  
+</video>
+
+- Alternatively: [Download/Watch the MP4](video/NeuralNetworkVisualization.mp4)
+
 ### Method Overview
 - **Feature extractor**: A compact CNN with two convolution layers and max-pooling produces a spatial feature map. In the current default config: `conv_channels = (12, 16)`, kernel size 3 with padding 1, and 2× max-pooling.
 - **Flatten + padding**: The feature map is flattened. If its size is not divisible by the number of branches, zero-padding is added to make it evenly split.
