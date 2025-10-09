@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 # MultiBranchNet
-MultiBranchNet
-=======
+
 ## Parallel Branch Neural Network for MNIST (nums)
 
 This project implements a lightweight Parallel Branch Neural Network (PBNN) for MNIST that achieves strong accuracy with very few parameters. The core idea is to split the flattened convolutional features into equal chunks and process each chunk through a tiny MLP branch. The branch outputs are concatenated and classified. This factorizes the large dense layer found in standard CNNs into parallel, smaller per-branch layers, dramatically reducing parameters while preserving capacity.
@@ -68,8 +66,8 @@ Prerequisites: Python 3.9+ and a working PyTorch installation compatible with yo
 
 ```bash
 # Clone this repository
-git clone <your-repo-url>.git
-cd nums
+git clone https://github.com/bekkari101/MultiBranchNet.git
+cd MultiBranchNet
 
 # Install dependencies
 python -m pip install -r requirements.txt
@@ -135,4 +133,4 @@ If you use or extend this codebase, please cite the repository or include a refe
 This project is open-sourced under the MIT License. See the `LICENSE` file for details.
 
 
->>>>>>> 97b5d5df5 (Initial commit: added MultiBranchNet project files)
+ 
