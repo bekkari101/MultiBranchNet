@@ -4,6 +4,8 @@
 
 This project implements a lightweight Parallel Branch Neural Network (PBNN) for MNIST that achieves strong accuracy with very few parameters. The core idea is to split the flattened convolutional features into equal chunks and process each chunk through a tiny MLP branch. The branch outputs are concatenated and classified. This factorizes the large dense layer found in standard CNNs into parallel, smaller per-branch layers, dramatically reducing parameters while preserving capacity.
 
+Inspired by multi-branch network ideas such as GoogLeNet/Inception modules discussed in Dive into Deep Learning. See: https://d2l.ai/chapter_convolutional-modern/googlenet.html
+
 ### Method Overview
 - **Feature extractor**: A compact CNN with two convolution layers and max-pooling produces a spatial feature map. In the current default config: `conv_channels = (12, 16)`, kernel size 3 with padding 1, and 2× max-pooling.
 - **Flatten + padding**: The feature map is flattened. If its size is not divisible by the number of branches, zero-padding is added to make it evenly split.
@@ -134,6 +136,13 @@ Plots are saved in `code/result/run_003/plots/`:
 - **Literature Comparison:** Most published MNIST models use tens or hundreds of thousands of parameters for similar scores. Deep CNNs reach slightly higher F1/accuracy (0.99+), but with much higher parameter counts.
 
 ---
+ 
+ ## Inspiration and Related Work
+ 
+ - Multi-branch architectures: Our approach is inspired by the idea of processing features along parallel paths and concatenating outputs, akin to GoogLeNet/Inception blocks, but simplified to fully connected branches on flattened conv features. Reference: [GoogLeNet (Multi-Branch Networks) in D2L](https://d2l.ai/chapter_convolutional-modern/googlenet.html).
+ - Fully-connected MNIST baselines: Simple FCNNs can be effective but tend to use many more parameters for similar or lower accuracy. Example: an FCNN with ~118k parameters reporting 87.22% accuracy [`HandWritten_Digits_FCNN.ipynb`](https://github.com/Ahmad-Ali-Rafique/Handwritten-Digit-Recognition-MNIST/blob/main/HandWritten_Digits_FCNN.ipynb).
+ - Classic CNNs (e.g., LeNet-5 variants) often reach >99% accuracy with 60k–200k+ parameters. MultiBranchNet targets competitive accuracy with a fraction of parameters by factorizing dense processing across branches.
+
 
 ### Notes
 - MNIST folders under `data/` follow class-per-directory convention.
