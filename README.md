@@ -1,10 +1,14 @@
 # MultiBranchNet
 
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) [![Python](https://img.shields.io/badge/python-3.9%2B-yellow)](requirements.txt)
+
 ## Parallel Branch Neural Network for MNIST (nums)
 
-This project implements a lightweight Parallel Branch Neural Network (PBNN) for MNIST that achieves strong accuracy with very few parameters. The core idea is to split the flattened convolutional features into equal chunks and process each chunk through a tiny MLP branch. The branch outputs are concatenated and classified. This factorizes the large dense layer found in standard CNNs into parallel, smaller per-branch layers, dramatically reducing parameters while preserving capacity.
+This project implements a lightweight Parallel Branch Neural Network (PBNN) for MNIST that achieves strong accuracy with very few parameters. The core idea is to split the flattened convolutional features into equal chunks and process each chunk through a tiny MLP branch. The branch outputs are concatenated and classified. This design reduces parameter count by factorizing dense processing across independent branches; concatenating branch outputs recovers global capacity while keeping per-branch compute small.
 
 Inspired by multi-branch network ideas such as GoogLeNet/Inception modules discussed in Dive into Deep Learning. See: https://d2l.ai/chapter_convolutional-modern/googlenet.html
+
+**Quick results:** best run `run_003` (dated 2025-10-09): 7,210 trainable parameters — 98.56% test accuracy (F1 = 0.9856).
 
 ### Method Overview
 - **Feature extractor**: A compact CNN with two convolution layers and max-pooling produces a spatial feature map. In the current default config: `conv_channels = (12, 16)`, kernel size 3 with padding 1, and 2× max-pooling.
@@ -81,10 +85,29 @@ python code/train_main.py
 python code/hyperP.py
 ```
 
+Download and prepare MNIST into `data/train|valid|test` using:
+
+```bash
+python code/1_download_data.py
+```
+
 ### Reproducing Results
 - Each training run writes to `code/result/run_xxx/` with `experiment_summary.json`, `training_history.json`, `plots/`, and `models/`.
 - To make your run deterministic, keep `ExperimentConfig.deterministic = True` and fixed `seed`.
 - Hardware will default to CUDA if available, otherwise CPU or Apple MPS if detected.
+
+Provenance for the headline metrics:
+
+- Results reported from `code/result/run_003/` (dated 2025-10-09). See `experiment_summary.json` for details.
+
+To reproduce `run_003` behavior:
+
+```bash
+# Ensure in code/hyperP.py:
+# ExperimentConfig.seed = 42
+# ExperimentConfig.deterministic = True
+python code/train_main.py
+```
 
 ### Modifying the Model
 Tuning tips to stay in 4k–8k params:
@@ -110,15 +133,15 @@ Plots are saved in `code/result/run_003/plots/`:
 - Confusion matrix: `code/result/run_003/plots/confusion_matrix.png`
 - Per-class metrics: `code/result/run_003/plots/class_metrics.png`
 
-### Comparative Table: MultiBranchNet vs Typical MNIST Baselines
+### Comparative Table: MultiBranchNet vs Typical MNIST Baselines (examples)
 
-| Model Type                     | Trainable Parameters | Test Accuracy | Test F1   | Notes                        |
-|--------------------------------|---------------------|---------------|-----------|------------------------------|
-| **MultiBranchNet (this work)** | **7,210**           | **98.56%**    | **0.9856**| branches=6, branch_size=6    |
-| Simple MLP (2-layers)          | ~100,000            | ~98%          | 0.98      | [Arm PyTorch Example][1]     |
-| Basic CNN (LeNet-5 variant)    | 60,000–200,000      | >99%          | >0.99     | [ChanMeng666][2], [Colab][3] |
-| Deep CNN                       | >1,000,000          | >99.5%        | 0.99–0.995| [GeeksforGeeks][4], [Nextjournal][5] |
-| FCNN baseline (external)       | ~118,000            | 87.22%        | -         | [HandWritten_Digits_FCNN.ipynb][6]   |
+| Model Type                     | Params     | Param Scale | Test Accuracy | Test F1   | Source |
+|--------------------------------|-----------:|------------:|--------------:|----------:|:-------|
+| **MultiBranchNet (this work)** | **7,210**  | 7k          | **98.56%**    | **0.9856**| run_003 (this repo) |
+| Simple MLP (2-layers)          | ~100,000   | 100k        | ~98%          | ~0.98     | [Arm PyTorch Example][1] |
+| Basic CNN (LeNet-5 variant)    | 60k–200k   | 60–200k     | ~99%          | ~0.99     | [ChanMeng666][2], [Colab][3] |
+| Deep CNN                       | >1,000,000 | >1M         | >99.5%        | 0.99–0.995| [GeeksforGeeks][4], [Nextjournal][5] |
+| FCNN baseline (external)       | ~118,000   | 118k        | 87.22%        | -         | [HandWritten_Digits_FCNN.ipynb][6] |
 
 #### References
 
@@ -142,6 +165,17 @@ Plots are saved in `code/result/run_003/plots/`:
  - Multi-branch architectures: Our approach is inspired by the idea of processing features along parallel paths and concatenating outputs, akin to GoogLeNet/Inception blocks, but simplified to fully connected branches on flattened conv features. Reference: [GoogLeNet (Multi-Branch Networks) in D2L](https://d2l.ai/chapter_convolutional-modern/googlenet.html).
  - Fully-connected MNIST baselines: Simple FCNNs can be effective but tend to use many more parameters for similar or lower accuracy. Example: an FCNN with ~118k parameters reporting 87.22% accuracy [`HandWritten_Digits_FCNN.ipynb`](https://github.com/Ahmad-Ali-Rafique/Handwritten-Digit-Recognition-MNIST/blob/main/HandWritten_Digits_FCNN.ipynb).
  - Classic CNNs (e.g., LeNet-5 variants) often reach >99% accuracy with 60k–200k+ parameters. MultiBranchNet targets competitive accuracy with a fraction of parameters by factorizing dense processing across branches.
+
+## Environment
+
+- Tested on: Python 3.10, PyTorch 2.1.0 (CUDA-enabled). CPU also works.
+- Install deps: `python -m pip install -r requirements.txt`
+
+## Limitations
+
+- MNIST is simple; results may not translate to harder datasets (e.g., CIFAR-10/100).
+- Some confusions remain (see confusion matrix under `code/result/run_xxx/plots/`).
+- Baseline figures are examples and can vary by preprocessing/architecture; see linked sources.
 
 
 ### Notes
