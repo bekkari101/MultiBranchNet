@@ -129,9 +129,14 @@ The following metrics come from `code/result/run_003/experiment_summary.json`:
 
 Plots are saved in `code/result/run_003/plots/`:
 
-- Training curves: `code/result/run_003/plots/training_curves.png`
-- Confusion matrix: `code/result/run_003/plots/confusion_matrix.png`
-- Per-class metrics: `code/result/run_003/plots/class_metrics.png`
+- Training curves: [code/result/run_003/plots/training_curves.png](code/result/run_003/plots/training_curves.png)
+- Confusion matrix: [code/result/run_003/plots/confusion_matrix.png](code/result/run_003/plots/confusion_matrix.png)
+- Per-class metrics: [code/result/run_003/plots/class_metrics.png](code/result/run_003/plots/class_metrics.png)
+
+Preview:
+
+![Training Curves](code/result/run_003/plots/training_curves.png)
+
 
 ### Comparative Table: MultiBranchNet vs Typical MNIST Baselines (examples)
 
