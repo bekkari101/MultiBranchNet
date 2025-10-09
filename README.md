@@ -187,6 +187,10 @@ Preview:
 - Tested on: Python 3.10, PyTorch 2.1.0 (CUDA-enabled). CPU also works.
 - Install deps: `python -m pip install -r requirements.txt`
 
+- Training machine: Intel Core i5-4670 (4 cores), 8 GB RAM (CPU).
+- CPU threads limited to 3 of 4 during training.
+  - To replicate on CPU: set `OMP_NUM_THREADS=3` and `MKL_NUM_THREADS=3`, or call `torch.set_num_threads(3)`.
+
 ## Limitations
 
 - MNIST is simple; results may not translate to harder datasets (e.g., CIFAR-10/100).
