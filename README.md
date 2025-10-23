@@ -1,5 +1,9 @@
 # MultiBranchNet: Evolution from V1 to V2
+> This project has multiple versions.  
+> You can view each version's documentation here:
 
+- 📘 [Version 1.0 README](./version_1.0/README.md)
+- 🚀 [Version 2.0 README (Current)](./version_2.0/README.md)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) 
 [![Python](https://img.shields.io/badge/python-3.9%2B-yellow)](requirements.txt)
 [![V1 Accuracy](https://img.shields.io/badge/V1%20Accuracy-98.56%25-brightgreen.svg)]()
