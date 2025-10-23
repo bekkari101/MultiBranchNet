@@ -1,0 +1,87 @@
+{
+  "run_number": 0,
+  "timestamp": "2025-10-23T11:18:54.578096",
+  "training_time_seconds": 1049.231175661087,
+  "training_time_formatted": "0h 17m 29s",
+  "final_metrics": {
+    "final_train_loss": 0.019016991021009455,
+    "final_valid_loss": 0.06319166411659523,
+    "final_train_accuracy": 99.38345797720798,
+    "final_valid_accuracy": 98.08,
+    "final_test_accuracy": 98.4,
+    "final_test_f1": 0.9839908471883777,
+    "best_valid_accuracy": 98.34666666666666,
+    "training_time_seconds": 1049.231175661087
+  },
+  "model_config": {
+    "num_branch_layers": 2,
+    "branch_layers": [
+      {
+        "num_branches": 6,
+        "nodes_per_branch": 7,
+        "total_nodes": 42
+      },
+      {
+        "num_branches": 3,
+        "nodes_per_branch": 14,
+        "total_nodes": 42
+      }
+    ],
+    "connectivity_pattern": [
+      {
+        "from_layer": 1,
+        "to_layer": 2,
+        "branches_per_group": 2,
+        "connections": [
+          {
+            "target_branch": 0,
+            "source_branches": [
+              0,
+              1
+            ],
+            "num_inputs": 14
+          },
+          {
+            "target_branch": 1,
+            "source_branches": [
+              2,
+              3
+            ],
+            "num_inputs": 14
+          },
+          {
+            "target_branch": 2,
+            "source_branches": [
+              4,
+              5
+            ],
+            "num_inputs": 14
+          }
+        ]
+      }
+    ],
+    "conv_channels": [
+      18,
+      11
+    ],
+    "flat_size": 539,
+    "final_hidden_size": 42,
+    "trainable_parameters": 6855
+  },
+  "training_config": {
+    "batch_size": 128,
+    "learning_rate": 0.001,
+    "num_epochs": 50,
+    "optimizer": "adam",
+    "weight_decay": 5e-05,
+    "lr_scheduler": "plateau",
+    "early_stopping": true,
+    "early_stopping_patience": 15
+  },
+  "experiment_config": {
+    "experiment_name": "parallel_branch_mnist",
+    "run_name": null,
+    "seed": 42,
+    "device": "auto"
+  }
+}

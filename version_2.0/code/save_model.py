@@ -1,8 +1,13 @@
 """
-Model saving and loading utilities for Parallel Branch Network.
+Model saving and loading utilities for Parallel Branch Network with STRUCTURED CONNECTIVITY.
 
 Handles saving/loading of model weights, optimizer states, training history,
 and experiment metadata in JSON format.
+
+UPDATED FOR:
+- Structured connectivity configuration
+- Multiple optimizer support
+- Enhanced metadata tracking
 """
 
 import json
@@ -63,7 +68,24 @@ def save_model(
     experiment_config: ExperimentConfig,
     is_best: bool = False
 ) -> Dict[str, Any]:
-    """Save model checkpoint with metadata."""
+    """Save model checkpoint with metadata for structured connectivity."""
+    
+    # Prepare model config for saving
+    model_config_dict = {
+        "num_branch_layers": model_config.num_branch_layers,
+        "branch_layers": [
+            {
+                "num_branches": layer.num_branches,
+                "nodes_per_branch": layer.nodes_per_branch,
+                "total_nodes": layer.total_nodes
+            }
+            for layer in model_config.branch_layers
+        ],
+        "conv_channels": model_config.conv_channels,
+        "flat_size": model_config.flat_size,
+        "final_hidden_size": model_config.final_hidden_size,
+        "trainable_parameters": model_config.get_trainable_parameters()
+    }
     
     # Prepare checkpoint data
     checkpoint = {
@@ -74,21 +96,14 @@ def save_model(
         "valid_loss": valid_loss,
         "valid_accuracy": valid_accuracy,
         "test_f1": test_f1,
-        "model_config": {
-            "branches": model_config.branches,
-            "branch_size": model_config.branch_size,
-            "branch_layers": model_config.branch_layers,
-            "conv_channels": model_config.conv_channels,
-            "input_branch_size": model_config.input_branch_size,
-            "hidden_size": model_config.hidden_size,
-            "trainable_parameters": model_config.get_trainable_parameters()
-        },
+        "model_config": model_config_dict,
         "training_config": {
             "batch_size": training_config.batch_size,
             "learning_rate": training_config.learning_rate,
             "num_epochs": training_config.num_epochs,
             "optimizer": training_config.optimizer,
-            "weight_decay": training_config.weight_decay
+            "weight_decay": training_config.weight_decay,
+            "lr_scheduler": training_config.lr_scheduler
         },
         "experiment_config": {
             "experiment_name": experiment_config.experiment_name,
@@ -186,28 +201,40 @@ def save_experiment_summary(
     experiment_config: ExperimentConfig,
     training_time: float
 ) -> Path:
-    """Save experiment summary with all key information."""
+    """Save experiment summary with all key information including structured connectivity."""
+    
+    # Prepare model config
+    model_config_dict = {
+        "num_branch_layers": model_config.num_branch_layers,
+        "branch_layers": [
+            {
+                "num_branches": layer.num_branches,
+                "nodes_per_branch": layer.nodes_per_branch,
+                "total_nodes": layer.total_nodes
+            }
+            for layer in model_config.branch_layers
+        ],
+        "connectivity_pattern": model_config.get_connectivity_pattern(),
+        "conv_channels": model_config.conv_channels,
+        "flat_size": model_config.flat_size,
+        "final_hidden_size": model_config.final_hidden_size,
+        "trainable_parameters": model_config.get_trainable_parameters()
+    }
     
     summary = {
         "run_number": run_number,
         "timestamp": datetime.now().isoformat(),
         "training_time_seconds": training_time,
+        "training_time_formatted": f"{training_time // 3600:.0f}h {(training_time % 3600) // 60:.0f}m {training_time % 60:.0f}s",
         "final_metrics": final_metrics,
-        "model_config": {
-            "branches": model_config.branches,
-            "branch_size": model_config.branch_size,
-            "branch_layers": model_config.branch_layers,
-            "conv_channels": model_config.conv_channels,
-            "input_branch_size": model_config.input_branch_size,
-            "hidden_size": model_config.hidden_size,
-            "trainable_parameters": model_config.get_trainable_parameters()
-        },
+        "model_config": model_config_dict,
         "training_config": {
             "batch_size": training_config.batch_size,
             "learning_rate": training_config.learning_rate,
             "num_epochs": training_config.num_epochs,
             "optimizer": training_config.optimizer,
             "weight_decay": training_config.weight_decay,
+            "lr_scheduler": training_config.lr_scheduler,
             "early_stopping": training_config.early_stopping,
             "early_stopping_patience": training_config.early_stopping_patience
         },
@@ -230,9 +257,9 @@ def save_experiment_summary(
 def print_save_info(run_dir: Path, run_number: int, final_metrics: Dict[str, float]):
     """Print information about saved files."""
     
-    print("=" * 60)
+    print("=" * 80)
     print("SAVE INFORMATION")
-    print("=" * 60)
+    print("=" * 80)
     
     print(f"\n📁 Run Directory: {run_dir}")
     print(f"🔢 Run Number: {run_number}")
@@ -250,12 +277,13 @@ def print_save_info(run_dir: Path, run_number: int, final_metrics: Dict[str, flo
     print(f"  • Plots: {run_dir / 'plots'}")
     print(f"    - training_curves.png")
     print(f"    - confusion_matrix.png")
+    print(f"    - class_metrics.png")
     
     print(f"\n📊 Final Metrics:")
     for metric, value in final_metrics.items():
         print(f"  • {metric}: {value:.4f}")
     
-    print("=" * 60)
+    print("=" * 80)
 
 
 if __name__ == "__main__":

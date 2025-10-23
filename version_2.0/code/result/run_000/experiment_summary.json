@@ -1,0 +1,83 @@
+{
+  "run_number": 0,
+  "timestamp": "2025-10-22T18:52:53.002846",
+  "training_time_seconds": 1556.1560173034668,
+  "training_time_formatted": "0h 25m 56s",
+  "final_metrics": {
+    "final_train_loss": 0.024304763134701597,
+    "final_valid_loss": 0.08053127047507155,
+    "final_train_accuracy": 99.2988782051282,
+    "final_valid_accuracy": 97.84,
+    "final_test_accuracy": 98.05,
+    "final_test_f1": 0.9804988426565313,
+    "best_valid_accuracy": 97.92666666666666,
+    "training_time_seconds": 1556.1560173034668
+  },
+  "model_config": {
+    "num_branch_layers": 2,
+    "branch_layers": [
+      {
+        "num_branches": 8,
+        "nodes_per_branch": 6,
+        "total_nodes": 48
+      },
+      {
+        "num_branches": 2,
+        "nodes_per_branch": 3,
+        "total_nodes": 6
+      }
+    ],
+    "connectivity_pattern": [
+      {
+        "from_layer": 1,
+        "to_layer": 2,
+        "branches_per_group": 4,
+        "connections": [
+          {
+            "target_branch": 0,
+            "source_branches": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "num_inputs": 24
+          },
+          {
+            "target_branch": 1,
+            "source_branches": [
+              4,
+              5,
+              6,
+              7
+            ],
+            "num_inputs": 24
+          }
+        ]
+      }
+    ],
+    "conv_channels": [
+      12,
+      16
+    ],
+    "flat_size": 784,
+    "final_hidden_size": 6,
+    "trainable_parameters": 6808
+  },
+  "training_config": {
+    "batch_size": 128,
+    "learning_rate": 0.001,
+    "num_epochs": 100,
+    "optimizer": "adam",
+    "weight_decay": 1e-05,
+    "lr_scheduler": "cosine",
+    "early_stopping": true,
+    "early_stopping_patience": 15
+  },
+  "experiment_config": {
+    "experiment_name": "parallel_branch_mnist",
+    "run_name": null,
+    "seed": 42,
+    "device": "auto"
+  }
+}

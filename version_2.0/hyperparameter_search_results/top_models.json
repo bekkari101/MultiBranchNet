@@ -1,0 +1,1022 @@
+{
+  "generated_at": "2025-10-23T08:28:56.195533",
+  "total_top_models": 20,
+  "models": [
+    {
+      "rank": 1,
+      "run_id": 85,
+      "test_accuracy": 98.8,
+      "test_f1_score": 0.988,
+      "best_valid_accuracy": 98.73,
+      "architecture": {
+        "total_parameters": 6146,
+        "conv_layers": {
+          "num_layers": 3,
+          "channels": [
+            20,
+            16,
+            12
+          ],
+          "kernel_sizes": [
+            3,
+            3,
+            3
+          ],
+          "description": "3L: [20, 16, 12]"
+        },
+        "branch_layers": {
+          "num_layers": 1,
+          "structure": [
+            {
+              "num_branches": 2,
+              "nodes_per_branch": 10
+            }
+          ],
+          "description": "2x10"
+        }
+      },
+      "training": {
+        "optimizer": "adam",
+        "learning_rate": 0.01,
+        "batch_size": 256,
+        "num_epochs": 50,
+        "actual_epochs": 24,
+        "extended_training": true,
+        "training_time_seconds": 30.64
+      },
+      "metrics": {
+        "test_accuracy": 98.8,
+        "test_f1": 0.988,
+        "test_loss": 0.0448,
+        "best_validation_accuracy": 98.73
+      },
+      "timestamp": "2025-10-22T21:13:56.040784"
+    },
+    {
+      "rank": 2,
+      "run_id": 88,
+      "test_accuracy": 98.76,
+      "test_f1_score": 0.9876,
+      "best_valid_accuracy": 98.48,
+      "architecture": {
+        "total_parameters": 6062,
+        "conv_layers": {
+          "num_layers": 3,
+          "channels": [
+            20,
+            16,
+            12
+          ],
+          "kernel_sizes": [
+            3,
+            3,
+            3
+          ],
+          "description": "3L: [20, 16, 12]"
+        },
+        "branch_layers": {
+          "num_layers": 1,
+          "structure": [
+            {
+              "num_branches": 4,
+              "nodes_per_branch": 8
+            }
+          ],
+          "description": "4x8"
+        }
+      },
+      "training": {
+        "optimizer": "adam",
+        "learning_rate": 0.001,
+        "batch_size": 128,
+        "num_epochs": 50,
+        "actual_epochs": 25,
+        "extended_training": true,
+        "training_time_seconds": 49.06
+      },
+      "metrics": {
+        "test_accuracy": 98.76,
+        "test_f1": 0.9876,
+        "test_loss": 0.04,
+        "best_validation_accuracy": 98.48
+      },
+      "timestamp": "2025-10-22T21:16:00.837311"
+    },
+    {
+      "rank": 3,
+      "run_id": 93,
+      "test_accuracy": 98.68,
+      "test_f1_score": 0.9868,
+      "best_valid_accuracy": 98.74,
+      "architecture": {
+        "total_parameters": 6062,
+        "conv_layers": {
+          "num_layers": 3,
+          "channels": [
+            20,
+            16,
+            12
+          ],
+          "kernel_sizes": [
+            3,
+            3,
+            3
+          ],
+          "description": "3L: [20, 16, 12]"
+        },
+        "branch_layers": {
+          "num_layers": 1,
+          "structure": [
+            {
+              "num_branches": 4,
+              "nodes_per_branch": 8
+            }
+          ],
+          "description": "4x8"
+        }
+      },
+      "training": {
+        "optimizer": "adam",
+        "learning_rate": 0.01,
+        "batch_size": 256,
+        "num_epochs": 50,
+        "actual_epochs": 24,
+        "extended_training": true,
+        "training_time_seconds": 32.99
+      },
+      "metrics": {
+        "test_accuracy": 98.68,
+        "test_f1": 0.9868,
+        "test_loss": 0.0504,
+        "best_validation_accuracy": 98.74
+      },
+      "timestamp": "2025-10-22T21:19:16.316424"
+    },
+    {
+      "rank": 4,
+      "run_id": 84,
+      "test_accuracy": 98.67,
+      "test_f1_score": 0.9867,
+      "best_valid_accuracy": 98.66,
+      "architecture": {
+        "total_parameters": 6146,
+        "conv_layers": {
+          "num_layers": 3,
+          "channels": [
+            20,
+            16,
+            12
+          ],
+          "kernel_sizes": [
+            3,
+            3,
+            3
+          ],
+          "description": "3L: [20, 16, 12]"
+        },
+        "branch_layers": {
+          "num_layers": 1,
+          "structure": [
+            {
+              "num_branches": 2,
+              "nodes_per_branch": 10
+            }
+          ],
+          "description": "2x10"
+        }
+      },
+      "training": {
+        "optimizer": "adam",
+        "learning_rate": 0.01,
+        "batch_size": 128,
+        "num_epochs": 50,
+        "actual_epochs": 24,
+        "extended_training": true,
+        "training_time_seconds": 42.8
+      },
+      "metrics": {
+        "test_accuracy": 98.67,
+        "test_f1": 0.9867,
+        "test_loss": 0.0577,
+        "best_validation_accuracy": 98.66
+      },
+      "timestamp": "2025-10-22T21:13:25.386645"
+    },
+    {
+      "rank": 5,
+      "run_id": 109,
+      "test_accuracy": 98.62,
+      "test_f1_score": 0.9862,
+      "best_valid_accuracy": 98.43,
+      "architecture": {
+        "total_parameters": 6178,
+        "conv_layers": {
+          "num_layers": 3,
+          "channels": [
+            20,
+            16,
+            12
+          ],
+          "kernel_sizes": [
+            3,
+            3,
+            3
+          ],
+          "description": "3L: [20, 16, 12]"
+        },
+        "branch_layers": {
+          "num_layers": 2,
+          "structure": [
+            {
+              "num_branches": 6,
+              "nodes_per_branch": 8
+            },
+            {
+              "num_branches": 2,
+              "nodes_per_branch": 6
+            }
+          ],
+          "description": "6x8 \u2192 2x6"
+        }
+      },
+      "training": {
+        "optimizer": "adam",
+        "learning_rate": 0.01,
+        "batch_size": 256,
+        "num_epochs": 50,
+        "actual_epochs": 24,
+        "extended_training": true,
+        "training_time_seconds": 39.71
+      },
+      "metrics": {
+        "test_accuracy": 98.62,
+        "test_f1": 0.9862,
+        "test_loss": 0.0488,
+        "best_validation_accuracy": 98.43
+      },
+      "timestamp": "2025-10-22T21:30:53.552749"
+    },
+    {
+      "rank": 6,
+      "run_id": 112,
+      "test_accuracy": 98.61,
+      "test_f1_score": 0.9861,
+      "best_valid_accuracy": 98.09,
+      "architecture": {
+        "total_parameters": 6026,
+        "conv_layers": {
+          "num_layers": 3,
+          "channels": [
+            20,
+            16,
+            12
+          ],
+          "kernel_sizes": [
+            3,
+            3,
+            3
+          ],
+          "description": "3L: [20, 16, 12]"
+        },
+        "branch_layers": {
+          "num_layers": 2,
+          "structure": [
+            {
+              "num_branches": 8,
+              "nodes_per_branch": 6
+            },
+            {
+              "num_branches": 4,
+              "nodes_per_branch": 5
+            }
+          ],
+          "description": "8x6 \u2192 4x5"
+        }
+      },
+      "training": {
+        "optimizer": "adam",
+        "learning_rate": 0.001,
+        "batch_size": 128,
+        "num_epochs": 50,
+        "actual_epochs": 25,
+        "extended_training": true,
+        "training_time_seconds": 76.32
+      },
+      "metrics": {
+        "test_accuracy": 98.61,
+        "test_f1": 0.9861,
+        "test_loss": 0.0455,
+        "best_validation_accuracy": 98.09
+      },
+      "timestamp": "2025-10-22T21:33:53.079704"
+    },
+    {
+      "rank": 7,
+      "run_id": 94,
+      "test_accuracy": 98.58,
+      "test_f1_score": 0.9858,
+      "best_valid_accuracy": 98.33,
+      "architecture": {
+        "total_parameters": 6062,
+        "conv_layers": {
+          "num_layers": 3,
+          "channels": [
+            20,
+            16,
+            12
+          ],
+          "kernel_sizes": [
+            3,
+            3,
+            3
+          ],
+          "description": "3L: [20, 16, 12]"
+        },
+        "branch_layers": {
+          "num_layers": 1,
+          "structure": [
+            {
+              "num_branches": 4,
+              "nodes_per_branch": 8
+            }
+          ],
+          "description": "4x8"
+        }
+      },
+      "training": {
+        "optimizer": "sgd",
+        "learning_rate": 0.01,
+        "batch_size": 128,
+        "num_epochs": 50,
+        "actual_epochs": 25,
+        "extended_training": true,
+        "training_time_seconds": 47.37
+      },
+      "metrics": {
+        "test_accuracy": 98.58,
+        "test_f1": 0.9858,
+        "test_loss": 0.0454,
+        "best_validation_accuracy": 98.33
+      },
+      "timestamp": "2025-10-22T21:20:03.705594"
+    },
+    {
+      "rank": 8,
+      "run_id": 86,
+      "test_accuracy": 98.53,
+      "test_f1_score": 0.9853,
+      "best_valid_accuracy": 98.43,
+      "architecture": {
+        "total_parameters": 6146,
+        "conv_layers": {
+          "num_layers": 3,
+          "channels": [
+            20,
+            16,
+            12
+          ],
+          "kernel_sizes": [
+            3,
+            3,
+            3
+          ],
+          "description": "3L: [20, 16, 12]"
+        },
+        "branch_layers": {
+          "num_layers": 1,
+          "structure": [
+            {
+              "num_branches": 2,
+              "nodes_per_branch": 10
+            }
+          ],
+          "description": "2x10"
+        }
+      },
+      "training": {
+        "optimizer": "sgd",
+        "learning_rate": 0.01,
+        "batch_size": 128,
+        "num_epochs": 50,
+        "actual_epochs": 25,
+        "extended_training": true,
+        "training_time_seconds": 43.42
+      },
+      "metrics": {
+        "test_accuracy": 98.53,
+        "test_f1": 0.9853,
+        "test_loss": 0.0447,
+        "best_validation_accuracy": 98.43
+      },
+      "timestamp": "2025-10-22T21:14:39.495084"
+    },
+    {
+      "rank": 9,
+      "run_id": 53,
+      "test_accuracy": 98.52,
+      "test_f1_score": 0.9852,
+      "best_valid_accuracy": 98.39,
+      "architecture": {
+        "total_parameters": 6993,
+        "conv_layers": {
+          "num_layers": 2,
+          "channels": [
+            18,
+            14
+          ],
+          "kernel_sizes": [
+            3,
+            3
+          ],
+          "description": "2L: [18, 14]"
+        },
+        "branch_layers": {
+          "num_layers": 2,
+          "structure": [
+            {
+              "num_branches": 6,
+              "nodes_per_branch": 6
+            },
+            {
+              "num_branches": 3,
+              "nodes_per_branch": 5
+            }
+          ],
+          "description": "6x6 \u2192 3x5"
+        }
+      },
+      "training": {
+        "optimizer": "adam",
+        "learning_rate": 0.01,
+        "batch_size": 256,
+        "num_epochs": 50,
+        "actual_epochs": 24,
+        "extended_training": true,
+        "training_time_seconds": 40.44
+      },
+      "metrics": {
+        "test_accuracy": 98.52,
+        "test_f1": 0.9852,
+        "test_loss": 0.0582,
+        "best_validation_accuracy": 98.39
+      },
+      "timestamp": "2025-10-22T21:08:23.640804"
+    },
+    {
+      "rank": 10,
+      "run_id": 92,
+      "test_accuracy": 98.51,
+      "test_f1_score": 0.9851,
+      "best_valid_accuracy": 98.54,
+      "architecture": {
+        "total_parameters": 6062,
+        "conv_layers": {
+          "num_layers": 3,
+          "channels": [
+            20,
+            16,
+            12
+          ],
+          "kernel_sizes": [
+            3,
+            3,
+            3
+          ],
+          "description": "3L: [20, 16, 12]"
+        },
+        "branch_layers": {
+          "num_layers": 1,
+          "structure": [
+            {
+              "num_branches": 4,
+              "nodes_per_branch": 8
+            }
+          ],
+          "description": "4x8"
+        }
+      },
+      "training": {
+        "optimizer": "adam",
+        "learning_rate": 0.01,
+        "batch_size": 128,
+        "num_epochs": 50,
+        "actual_epochs": 25,
+        "extended_training": true,
+        "training_time_seconds": 48.17
+      },
+      "metrics": {
+        "test_accuracy": 98.51,
+        "test_f1": 0.9851,
+        "test_loss": 0.0621,
+        "best_validation_accuracy": 98.54
+      },
+      "timestamp": "2025-10-22T21:18:43.313360"
+    },
+    {
+      "rank": 11,
+      "run_id": 21,
+      "test_accuracy": 98.49,
+      "test_f1_score": 0.9849,
+      "best_valid_accuracy": 98.54,
+      "architecture": {
+        "total_parameters": 6966,
+        "conv_layers": {
+          "num_layers": 2,
+          "channels": [
+            16,
+            12
+          ],
+          "kernel_sizes": [
+            3,
+            3
+          ],
+          "description": "2L: [16, 12]"
+        },
+        "branch_layers": {
+          "num_layers": 1,
+          "structure": [
+            {
+              "num_branches": 4,
+              "nodes_per_branch": 8
+            }
+          ],
+          "description": "4x8"
+        }
+      },
+      "training": {
+        "optimizer": "adam",
+        "learning_rate": 0.01,
+        "batch_size": 256,
+        "num_epochs": 50,
+        "actual_epochs": 24,
+        "extended_training": true,
+        "training_time_seconds": 29.33
+      },
+      "metrics": {
+        "test_accuracy": 98.49,
+        "test_f1": 0.9849,
+        "test_loss": 0.0575,
+        "best_validation_accuracy": 98.54
+      },
+      "timestamp": "2025-10-22T20:46:02.473541"
+    },
+    {
+      "rank": 12,
+      "run_id": 101,
+      "test_accuracy": 98.49,
+      "test_f1_score": 0.9849,
+      "best_valid_accuracy": 98.28,
+      "architecture": {
+        "total_parameters": 6066,
+        "conv_layers": {
+          "num_layers": 3,
+          "channels": [
+            20,
+            16,
+            12
+          ],
+          "kernel_sizes": [
+            3,
+            3,
+            3
+          ],
+          "description": "3L: [20, 16, 12]"
+        },
+        "branch_layers": {
+          "num_layers": 2,
+          "structure": [
+            {
+              "num_branches": 4,
+              "nodes_per_branch": 8
+            },
+            {
+              "num_branches": 2,
+              "nodes_per_branch": 6
+            }
+          ],
+          "description": "4x8 \u2192 2x6"
+        }
+      },
+      "training": {
+        "optimizer": "adam",
+        "learning_rate": 0.01,
+        "batch_size": 256,
+        "num_epochs": 50,
+        "actual_epochs": 25,
+        "extended_training": true,
+        "training_time_seconds": 37.69
+      },
+      "metrics": {
+        "test_accuracy": 98.49,
+        "test_f1": 0.9849,
+        "test_loss": 0.0524,
+        "best_validation_accuracy": 98.28
+      },
+      "timestamp": "2025-10-22T21:24:24.045614"
+    },
+    {
+      "rank": 13,
+      "run_id": 6,
+      "test_accuracy": 98.48,
+      "test_f1_score": 0.9848,
+      "best_valid_accuracy": 98.21,
+      "architecture": {
+        "total_parameters": 6790,
+        "conv_layers": {
+          "num_layers": 2,
+          "channels": [
+            16,
+            12
+          ],
+          "kernel_sizes": [
+            3,
+            3
+          ],
+          "description": "2L: [16, 12]"
+        },
+        "branch_layers": {
+          "num_layers": 1,
+          "structure": [
+            {
+              "num_branches": 2,
+              "nodes_per_branch": 8
+            }
+          ],
+          "description": "2x8"
+        }
+      },
+      "training": {
+        "optimizer": "sgd",
+        "learning_rate": 0.01,
+        "batch_size": 128,
+        "num_epochs": 50,
+        "actual_epochs": 25,
+        "extended_training": true,
+        "training_time_seconds": 43.62
+      },
+      "metrics": {
+        "test_accuracy": 98.48,
+        "test_f1": 0.9848,
+        "test_loss": 0.0488,
+        "best_validation_accuracy": 98.21
+      },
+      "timestamp": "2025-10-22T20:36:55.738728"
+    },
+    {
+      "rank": 14,
+      "run_id": 116,
+      "test_accuracy": 98.46,
+      "test_f1_score": 0.9846,
+      "best_valid_accuracy": 98.36,
+      "architecture": {
+        "total_parameters": 6026,
+        "conv_layers": {
+          "num_layers": 3,
+          "channels": [
+            20,
+            16,
+            12
+          ],
+          "kernel_sizes": [
+            3,
+            3,
+            3
+          ],
+          "description": "3L: [20, 16, 12]"
+        },
+        "branch_layers": {
+          "num_layers": 2,
+          "structure": [
+            {
+              "num_branches": 8,
+              "nodes_per_branch": 6
+            },
+            {
+              "num_branches": 4,
+              "nodes_per_branch": 5
+            }
+          ],
+          "description": "8x6 \u2192 4x5"
+        }
+      },
+      "training": {
+        "optimizer": "adam",
+        "learning_rate": 0.01,
+        "batch_size": 128,
+        "num_epochs": 50,
+        "actual_epochs": 24,
+        "extended_training": true,
+        "training_time_seconds": 73.15
+      },
+      "metrics": {
+        "test_accuracy": 98.46,
+        "test_f1": 0.9846,
+        "test_loss": 0.0566,
+        "best_validation_accuracy": 98.36
+      },
+      "timestamp": "2025-10-22T21:36:46.296751"
+    },
+    {
+      "rank": 15,
+      "run_id": 117,
+      "test_accuracy": 98.46,
+      "test_f1_score": 0.9846,
+      "best_valid_accuracy": 98.53,
+      "architecture": {
+        "total_parameters": 6026,
+        "conv_layers": {
+          "num_layers": 3,
+          "channels": [
+            20,
+            16,
+            12
+          ],
+          "kernel_sizes": [
+            3,
+            3,
+            3
+          ],
+          "description": "3L: [20, 16, 12]"
+        },
+        "branch_layers": {
+          "num_layers": 2,
+          "structure": [
+            {
+              "num_branches": 8,
+              "nodes_per_branch": 6
+            },
+            {
+              "num_branches": 4,
+              "nodes_per_branch": 5
+            }
+          ],
+          "description": "8x6 \u2192 4x5"
+        }
+      },
+      "training": {
+        "optimizer": "adam",
+        "learning_rate": 0.01,
+        "batch_size": 256,
+        "num_epochs": 50,
+        "actual_epochs": 24,
+        "extended_training": true,
+        "training_time_seconds": 46.14
+      },
+      "metrics": {
+        "test_accuracy": 98.46,
+        "test_f1": 0.9846,
+        "test_loss": 0.0578,
+        "best_validation_accuracy": 98.53
+      },
+      "timestamp": "2025-10-22T21:37:32.461407"
+    },
+    {
+      "rank": 16,
+      "run_id": 80,
+      "test_accuracy": 98.45,
+      "test_f1_score": 0.9845,
+      "best_valid_accuracy": 98.25,
+      "architecture": {
+        "total_parameters": 6146,
+        "conv_layers": {
+          "num_layers": 3,
+          "channels": [
+            20,
+            16,
+            12
+          ],
+          "kernel_sizes": [
+            3,
+            3,
+            3
+          ],
+          "description": "3L: [20, 16, 12]"
+        },
+        "branch_layers": {
+          "num_layers": 1,
+          "structure": [
+            {
+              "num_branches": 2,
+              "nodes_per_branch": 10
+            }
+          ],
+          "description": "2x10"
+        }
+      },
+      "training": {
+        "optimizer": "adam",
+        "learning_rate": 0.001,
+        "batch_size": 128,
+        "num_epochs": 50,
+        "actual_epochs": 25,
+        "extended_training": true,
+        "training_time_seconds": 44.26
+      },
+      "metrics": {
+        "test_accuracy": 98.45,
+        "test_f1": 0.9845,
+        "test_loss": 0.0481,
+        "best_validation_accuracy": 98.25
+      },
+      "timestamp": "2025-10-22T21:10:54.650362"
+    },
+    {
+      "rank": 17,
+      "run_id": 5,
+      "test_accuracy": 98.43,
+      "test_f1_score": 0.9843,
+      "best_valid_accuracy": 98.35,
+      "architecture": {
+        "total_parameters": 6790,
+        "conv_layers": {
+          "num_layers": 2,
+          "channels": [
+            16,
+            12
+          ],
+          "kernel_sizes": [
+            3,
+            3
+          ],
+          "description": "2L: [16, 12]"
+        },
+        "branch_layers": {
+          "num_layers": 1,
+          "structure": [
+            {
+              "num_branches": 2,
+              "nodes_per_branch": 8
+            }
+          ],
+          "description": "2x8"
+        }
+      },
+      "training": {
+        "optimizer": "adam",
+        "learning_rate": 0.01,
+        "batch_size": 256,
+        "num_epochs": 50,
+        "actual_epochs": 25,
+        "extended_training": true,
+        "training_time_seconds": 29.23
+      },
+      "metrics": {
+        "test_accuracy": 98.43,
+        "test_f1": 0.9843,
+        "test_loss": 0.0583,
+        "best_validation_accuracy": 98.35
+      },
+      "timestamp": "2025-10-22T20:36:12.113836"
+    },
+    {
+      "rank": 18,
+      "run_id": 32,
+      "test_accuracy": 98.42,
+      "test_f1_score": 0.9842,
+      "best_valid_accuracy": 98.3,
+      "architecture": {
+        "total_parameters": 6792,
+        "conv_layers": {
+          "num_layers": 2,
+          "channels": [
+            18,
+            14
+          ],
+          "kernel_sizes": [
+            3,
+            3
+          ],
+          "description": "2L: [18, 14]"
+        },
+        "branch_layers": {
+          "num_layers": 1,
+          "structure": [
+            {
+              "num_branches": 3,
+              "nodes_per_branch": 6
+            }
+          ],
+          "description": "3x6"
+        }
+      },
+      "training": {
+        "optimizer": "adam",
+        "learning_rate": 0.001,
+        "batch_size": 128,
+        "num_epochs": 50,
+        "actual_epochs": 25,
+        "extended_training": true,
+        "training_time_seconds": 43.69
+      },
+      "metrics": {
+        "test_accuracy": 98.42,
+        "test_f1": 0.9842,
+        "test_loss": 0.0509,
+        "best_validation_accuracy": 98.3
+      },
+      "timestamp": "2025-10-22T20:54:03.556228"
+    },
+    {
+      "rank": 19,
+      "run_id": 104,
+      "test_accuracy": 98.38,
+      "test_f1_score": 0.9838,
+      "best_valid_accuracy": 97.87,
+      "architecture": {
+        "total_parameters": 6178,
+        "conv_layers": {
+          "num_layers": 3,
+          "channels": [
+            20,
+            16,
+            12
+          ],
+          "kernel_sizes": [
+            3,
+            3,
+            3
+          ],
+          "description": "3L: [20, 16, 12]"
+        },
+        "branch_layers": {
+          "num_layers": 2,
+          "structure": [
+            {
+              "num_branches": 6,
+              "nodes_per_branch": 8
+            },
+            {
+              "num_branches": 2,
+              "nodes_per_branch": 6
+            }
+          ],
+          "description": "6x8 \u2192 2x6"
+        }
+      },
+      "training": {
+        "optimizer": "adam",
+        "learning_rate": 0.001,
+        "batch_size": 128,
+        "num_epochs": 50,
+        "actual_epochs": 25,
+        "extended_training": true,
+        "training_time_seconds": 64.39
+      },
+      "metrics": {
+        "test_accuracy": 98.38,
+        "test_f1": 0.9838,
+        "test_loss": 0.0505,
+        "best_validation_accuracy": 97.87
+      },
+      "timestamp": "2025-10-22T21:27:03.740299"
+    },
+    {
+      "rank": 20,
+      "run_id": 17,
+      "test_accuracy": 98.36,
+      "test_f1_score": 0.9836,
+      "best_valid_accuracy": 97.86,
+      "architecture": {
+        "total_parameters": 6966,
+        "conv_layers": {
+          "num_layers": 2,
+          "channels": [
+            16,
+            12
+          ],
+          "kernel_sizes": [
+            3,
+            3
+          ],
+          "description": "2L: [16, 12]"
+        },
+        "branch_layers": {
+          "num_layers": 1,
+          "structure": [
+            {
+              "num_branches": 4,
+              "nodes_per_branch": 8
+            }
+          ],
+          "description": "4x8"
+        }
+      },
+      "training": {
+        "optimizer": "adam",
+        "learning_rate": 0.001,
+        "batch_size": 256,
+        "num_epochs": 50,
+        "actual_epochs": 25,
+        "extended_training": true,
+        "training_time_seconds": 31.36
+      },
+      "metrics": {
+        "test_accuracy": 98.36,
+        "test_f1": 0.9836,
+        "test_loss": 0.0532,
+        "best_validation_accuracy": 97.86
+      },
+      "timestamp": "2025-10-22T20:43:33.347303"
+    }
+  ]
+}

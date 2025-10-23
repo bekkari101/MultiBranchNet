@@ -1,0 +1,54 @@
+{
+  "rank": 6,
+  "run_id": 112,
+  "test_accuracy": 98.61,
+  "test_f1_score": 0.9861,
+  "best_valid_accuracy": 98.09,
+  "architecture": {
+    "total_parameters": 6026,
+    "conv_layers": {
+      "num_layers": 3,
+      "channels": [
+        20,
+        16,
+        12
+      ],
+      "kernel_sizes": [
+        3,
+        3,
+        3
+      ],
+      "description": "3L: [20, 16, 12]"
+    },
+    "branch_layers": {
+      "num_layers": 2,
+      "structure": [
+        {
+          "num_branches": 8,
+          "nodes_per_branch": 6
+        },
+        {
+          "num_branches": 4,
+          "nodes_per_branch": 5
+        }
+      ],
+      "description": "8x6 \u2192 4x5"
+    }
+  },
+  "training": {
+    "optimizer": "adam",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "num_epochs": 50,
+    "actual_epochs": 25,
+    "extended_training": true,
+    "training_time_seconds": 76.32
+  },
+  "metrics": {
+    "test_accuracy": 98.61,
+    "test_f1": 0.9861,
+    "test_loss": 0.0455,
+    "best_validation_accuracy": 98.09
+  },
+  "timestamp": "2025-10-22T21:33:53.079704"
+}

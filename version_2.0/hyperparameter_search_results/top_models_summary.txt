@@ -1,0 +1,444 @@
+================================================================================
+TOP PERFORMING MODELS - HYPERPARAMETER SEARCH RESULTS
+================================================================================
+
+================================================================================
+RANK #1 - Run ID: 85
+================================================================================
+Test Accuracy: 98.80%
+Test F1 Score: 0.9880
+Best Validation Accuracy: 98.73%
+
+ARCHITECTURE:
+   - Total Parameters: 6,146
+   - Conv Layers: 3L: [20, 16, 12]
+   - Branch Layers: 2x10
+
+TRAINING CONFIG:
+   - Optimizer: ADAM
+   - Learning Rate: 0.01
+   - Batch Size: 256
+   - Epochs: 24/50
+   - ** Extended Training Applied (98%+ accuracy) **
+   - Training Time: 30.64s
+
+Timestamp: 2025-10-22T21:13:56.040784
+
+================================================================================
+RANK #2 - Run ID: 88
+================================================================================
+Test Accuracy: 98.76%
+Test F1 Score: 0.9876
+Best Validation Accuracy: 98.48%
+
+ARCHITECTURE:
+   - Total Parameters: 6,062
+   - Conv Layers: 3L: [20, 16, 12]
+   - Branch Layers: 4x8
+
+TRAINING CONFIG:
+   - Optimizer: ADAM
+   - Learning Rate: 0.001
+   - Batch Size: 128
+   - Epochs: 25/50
+   - ** Extended Training Applied (98%+ accuracy) **
+   - Training Time: 49.06s
+
+Timestamp: 2025-10-22T21:16:00.837311
+
+================================================================================
+RANK #3 - Run ID: 93
+================================================================================
+Test Accuracy: 98.68%
+Test F1 Score: 0.9868
+Best Validation Accuracy: 98.74%
+
+ARCHITECTURE:
+   - Total Parameters: 6,062
+   - Conv Layers: 3L: [20, 16, 12]
+   - Branch Layers: 4x8
+
+TRAINING CONFIG:
+   - Optimizer: ADAM
+   - Learning Rate: 0.01
+   - Batch Size: 256
+   - Epochs: 24/50
+   - ** Extended Training Applied (98%+ accuracy) **
+   - Training Time: 32.99s
+
+Timestamp: 2025-10-22T21:19:16.316424
+
+================================================================================
+RANK #4 - Run ID: 84
+================================================================================
+Test Accuracy: 98.67%
+Test F1 Score: 0.9867
+Best Validation Accuracy: 98.66%
+
+ARCHITECTURE:
+   - Total Parameters: 6,146
+   - Conv Layers: 3L: [20, 16, 12]
+   - Branch Layers: 2x10
+
+TRAINING CONFIG:
+   - Optimizer: ADAM
+   - Learning Rate: 0.01
+   - Batch Size: 128
+   - Epochs: 24/50
+   - ** Extended Training Applied (98%+ accuracy) **
+   - Training Time: 42.80s
+
+Timestamp: 2025-10-22T21:13:25.386645
+
+================================================================================
+RANK #5 - Run ID: 109
+================================================================================
+Test Accuracy: 98.62%
+Test F1 Score: 0.9862
+Best Validation Accuracy: 98.43%
+
+ARCHITECTURE:
+   - Total Parameters: 6,178
+   - Conv Layers: 3L: [20, 16, 12]
+   - Branch Layers: 6x8 → 2x6
+
+TRAINING CONFIG:
+   - Optimizer: ADAM
+   - Learning Rate: 0.01
+   - Batch Size: 256
+   - Epochs: 24/50
+   - ** Extended Training Applied (98%+ accuracy) **
+   - Training Time: 39.71s
+
+Timestamp: 2025-10-22T21:30:53.552749
+
+================================================================================
+RANK #6 - Run ID: 112
+================================================================================
+Test Accuracy: 98.61%
+Test F1 Score: 0.9861
+Best Validation Accuracy: 98.09%
+
+ARCHITECTURE:
+   - Total Parameters: 6,026
+   - Conv Layers: 3L: [20, 16, 12]
+   - Branch Layers: 8x6 → 4x5
+
+TRAINING CONFIG:
+   - Optimizer: ADAM
+   - Learning Rate: 0.001
+   - Batch Size: 128
+   - Epochs: 25/50
+   - ** Extended Training Applied (98%+ accuracy) **
+   - Training Time: 76.32s
+
+Timestamp: 2025-10-22T21:33:53.079704
+
+================================================================================
+RANK #7 - Run ID: 94
+================================================================================
+Test Accuracy: 98.58%
+Test F1 Score: 0.9858
+Best Validation Accuracy: 98.33%
+
+ARCHITECTURE:
+   - Total Parameters: 6,062
+   - Conv Layers: 3L: [20, 16, 12]
+   - Branch Layers: 4x8
+
+TRAINING CONFIG:
+   - Optimizer: SGD
+   - Learning Rate: 0.01
+   - Batch Size: 128
+   - Epochs: 25/50
+   - ** Extended Training Applied (98%+ accuracy) **
+   - Training Time: 47.37s
+
+Timestamp: 2025-10-22T21:20:03.705594
+
+================================================================================
+RANK #8 - Run ID: 86
+================================================================================
+Test Accuracy: 98.53%
+Test F1 Score: 0.9853
+Best Validation Accuracy: 98.43%
+
+ARCHITECTURE:
+   - Total Parameters: 6,146
+   - Conv Layers: 3L: [20, 16, 12]
+   - Branch Layers: 2x10
+
+TRAINING CONFIG:
+   - Optimizer: SGD
+   - Learning Rate: 0.01
+   - Batch Size: 128
+   - Epochs: 25/50
+   - ** Extended Training Applied (98%+ accuracy) **
+   - Training Time: 43.42s
+
+Timestamp: 2025-10-22T21:14:39.495084
+
+================================================================================
+RANK #9 - Run ID: 53
+================================================================================
+Test Accuracy: 98.52%
+Test F1 Score: 0.9852
+Best Validation Accuracy: 98.39%
+
+ARCHITECTURE:
+   - Total Parameters: 6,993
+   - Conv Layers: 2L: [18, 14]
+   - Branch Layers: 6x6 → 3x5
+
+TRAINING CONFIG:
+   - Optimizer: ADAM
+   - Learning Rate: 0.01
+   - Batch Size: 256
+   - Epochs: 24/50
+   - ** Extended Training Applied (98%+ accuracy) **
+   - Training Time: 40.44s
+
+Timestamp: 2025-10-22T21:08:23.640804
+
+================================================================================
+RANK #10 - Run ID: 92
+================================================================================
+Test Accuracy: 98.51%
+Test F1 Score: 0.9851
+Best Validation Accuracy: 98.54%
+
+ARCHITECTURE:
+   - Total Parameters: 6,062
+   - Conv Layers: 3L: [20, 16, 12]
+   - Branch Layers: 4x8
+
+TRAINING CONFIG:
+   - Optimizer: ADAM
+   - Learning Rate: 0.01
+   - Batch Size: 128
+   - Epochs: 25/50
+   - ** Extended Training Applied (98%+ accuracy) **
+   - Training Time: 48.17s
+
+Timestamp: 2025-10-22T21:18:43.313360
+
+================================================================================
+RANK #11 - Run ID: 21
+================================================================================
+Test Accuracy: 98.49%
+Test F1 Score: 0.9849
+Best Validation Accuracy: 98.54%
+
+ARCHITECTURE:
+   - Total Parameters: 6,966
+   - Conv Layers: 2L: [16, 12]
+   - Branch Layers: 4x8
+
+TRAINING CONFIG:
+   - Optimizer: ADAM
+   - Learning Rate: 0.01
+   - Batch Size: 256
+   - Epochs: 24/50
+   - ** Extended Training Applied (98%+ accuracy) **
+   - Training Time: 29.33s
+
+Timestamp: 2025-10-22T20:46:02.473541
+
+================================================================================
+RANK #12 - Run ID: 101
+================================================================================
+Test Accuracy: 98.49%
+Test F1 Score: 0.9849
+Best Validation Accuracy: 98.28%
+
+ARCHITECTURE:
+   - Total Parameters: 6,066
+   - Conv Layers: 3L: [20, 16, 12]
+   - Branch Layers: 4x8 → 2x6
+
+TRAINING CONFIG:
+   - Optimizer: ADAM
+   - Learning Rate: 0.01
+   - Batch Size: 256
+   - Epochs: 25/50
+   - ** Extended Training Applied (98%+ accuracy) **
+   - Training Time: 37.69s
+
+Timestamp: 2025-10-22T21:24:24.045614
+
+================================================================================
+RANK #13 - Run ID: 6
+================================================================================
+Test Accuracy: 98.48%
+Test F1 Score: 0.9848
+Best Validation Accuracy: 98.21%
+
+ARCHITECTURE:
+   - Total Parameters: 6,790
+   - Conv Layers: 2L: [16, 12]
+   - Branch Layers: 2x8
+
+TRAINING CONFIG:
+   - Optimizer: SGD
+   - Learning Rate: 0.01
+   - Batch Size: 128
+   - Epochs: 25/50
+   - ** Extended Training Applied (98%+ accuracy) **
+   - Training Time: 43.62s
+
+Timestamp: 2025-10-22T20:36:55.738728
+
+================================================================================
+RANK #14 - Run ID: 116
+================================================================================
+Test Accuracy: 98.46%
+Test F1 Score: 0.9846
+Best Validation Accuracy: 98.36%
+
+ARCHITECTURE:
+   - Total Parameters: 6,026
+   - Conv Layers: 3L: [20, 16, 12]
+   - Branch Layers: 8x6 → 4x5
+
+TRAINING CONFIG:
+   - Optimizer: ADAM
+   - Learning Rate: 0.01
+   - Batch Size: 128
+   - Epochs: 24/50
+   - ** Extended Training Applied (98%+ accuracy) **
+   - Training Time: 73.15s
+
+Timestamp: 2025-10-22T21:36:46.296751
+
+================================================================================
+RANK #15 - Run ID: 117
+================================================================================
+Test Accuracy: 98.46%
+Test F1 Score: 0.9846
+Best Validation Accuracy: 98.53%
+
+ARCHITECTURE:
+   - Total Parameters: 6,026
+   - Conv Layers: 3L: [20, 16, 12]
+   - Branch Layers: 8x6 → 4x5
+
+TRAINING CONFIG:
+   - Optimizer: ADAM
+   - Learning Rate: 0.01
+   - Batch Size: 256
+   - Epochs: 24/50
+   - ** Extended Training Applied (98%+ accuracy) **
+   - Training Time: 46.14s
+
+Timestamp: 2025-10-22T21:37:32.461407
+
+================================================================================
+RANK #16 - Run ID: 80
+================================================================================
+Test Accuracy: 98.45%
+Test F1 Score: 0.9845
+Best Validation Accuracy: 98.25%
+
+ARCHITECTURE:
+   - Total Parameters: 6,146
+   - Conv Layers: 3L: [20, 16, 12]
+   - Branch Layers: 2x10
+
+TRAINING CONFIG:
+   - Optimizer: ADAM
+   - Learning Rate: 0.001
+   - Batch Size: 128
+   - Epochs: 25/50
+   - ** Extended Training Applied (98%+ accuracy) **
+   - Training Time: 44.26s
+
+Timestamp: 2025-10-22T21:10:54.650362
+
+================================================================================
+RANK #17 - Run ID: 5
+================================================================================
+Test Accuracy: 98.43%
+Test F1 Score: 0.9843
+Best Validation Accuracy: 98.35%
+
+ARCHITECTURE:
+   - Total Parameters: 6,790
+   - Conv Layers: 2L: [16, 12]
+   - Branch Layers: 2x8
+
+TRAINING CONFIG:
+   - Optimizer: ADAM
+   - Learning Rate: 0.01
+   - Batch Size: 256
+   - Epochs: 25/50
+   - ** Extended Training Applied (98%+ accuracy) **
+   - Training Time: 29.23s
+
+Timestamp: 2025-10-22T20:36:12.113836
+
+================================================================================
+RANK #18 - Run ID: 32
+================================================================================
+Test Accuracy: 98.42%
+Test F1 Score: 0.9842
+Best Validation Accuracy: 98.30%
+
+ARCHITECTURE:
+   - Total Parameters: 6,792
+   - Conv Layers: 2L: [18, 14]
+   - Branch Layers: 3x6
+
+TRAINING CONFIG:
+   - Optimizer: ADAM
+   - Learning Rate: 0.001
+   - Batch Size: 128
+   - Epochs: 25/50
+   - ** Extended Training Applied (98%+ accuracy) **
+   - Training Time: 43.69s
+
+Timestamp: 2025-10-22T20:54:03.556228
+
+================================================================================
+RANK #19 - Run ID: 104
+================================================================================
+Test Accuracy: 98.38%
+Test F1 Score: 0.9838
+Best Validation Accuracy: 97.87%
+
+ARCHITECTURE:
+   - Total Parameters: 6,178
+   - Conv Layers: 3L: [20, 16, 12]
+   - Branch Layers: 6x8 → 2x6
+
+TRAINING CONFIG:
+   - Optimizer: ADAM
+   - Learning Rate: 0.001
+   - Batch Size: 128
+   - Epochs: 25/50
+   - ** Extended Training Applied (98%+ accuracy) **
+   - Training Time: 64.39s
+
+Timestamp: 2025-10-22T21:27:03.740299
+
+================================================================================
+RANK #20 - Run ID: 17
+================================================================================
+Test Accuracy: 98.36%
+Test F1 Score: 0.9836
+Best Validation Accuracy: 97.86%
+
+ARCHITECTURE:
+   - Total Parameters: 6,966
+   - Conv Layers: 2L: [16, 12]
+   - Branch Layers: 4x8
+
+TRAINING CONFIG:
+   - Optimizer: ADAM
+   - Learning Rate: 0.001
+   - Batch Size: 256
+   - Epochs: 25/50
+   - ** Extended Training Applied (98%+ accuracy) **
+   - Training Time: 31.36s
+
+Timestamp: 2025-10-22T20:43:33.347303
+
