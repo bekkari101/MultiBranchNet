@@ -304,6 +304,10 @@ Characteristics:
 ⚠️ Longer training time (17m 29s vs 11m 36s)
 ```
 
+**V2 Training Progress Visualization:**
+
+![Training Curves](code/result/run_000/plots/training_curves.png)
+
 ### **Performance Analysis Summary**
 
 #### **Version 1.0 Strengths:**
