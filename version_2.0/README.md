@@ -37,17 +37,17 @@ This table compares MultiBranchNet with various implementations from the GitHub 
 
 | Model | Parameters | Architecture | Test Acc | Training Time | Efficiency Score* | Repository/Reference | Year | Notes |
 |-------|-----------|--------------|----------|---------------|------------------|---------------------|------|-------|
-| **MultiBranchNet V1** | **7,210** | 6 parallel branches | **98.56%** | 11m 36s | **⭐ 13,672** | This repo | 2025 | **Best efficiency!** |
-| **MultiBranchNet V2 (best @epoch 47)** | **6,855** | 6→3 structured | **98.57%** | 17m 29s | **⭐ 14,379** | This repo | 2025 | **Most flexible!** |
-| LeNet-5 | 60,000 | Classic CNN | 98.77% | ~15 min | 1,646 | [Paper](http://yann.lecun.com/exdb/lenet/) | 1998 | Original CNN |
-| Simple CNN | 1,199,882 | Conv+FC | 99.25% | ~20 min | 83 | [PyTorch Tutorial](https://github.com/pytorch/examples/tree/main/mnist) | - | PyTorch official |
-| ResNet-18 (adapted) | 11,180,000 | Deep residual | 99.54% | ~45 min | 9 | [torchvision](https://github.com/pytorch/vision) | 2015 | Overkill for MNIST |
-| VGG-like CNN | 3,274,634 | Deep CNN | 99.31% | ~35 min | 30 | [eriklindernoren/ML-From-Scratch](https://github.com/eriklindernoren/ML-From-Scratch) | - | 454× more params |
-| MobileNetV2-tiny | 15,000 | Depthwise separable | 98.90% | ~18 min | 659 | [PyTorch Hub](https://pytorch.org/hub/) | 2018 | 2.2× more params |
-| MLP-Mixer (tiny) | 324,234 | Token-mixing | 98.45% | ~18 min | 304 | [PyTorch Hub](https://pytorch.org/hub/) | 2021 | 47× more params |
-| Custom CNN (Kaggle) | 431,080 | Conv+FC | 99.12% | ~35 min | 230 | [Kaggle](https://www.kaggle.com/competitions/digit-recognizer) | - | 59× more params |
-| GhostNet | 5,180,840 | Depthwise separable | 99.01% | ~35 min | 191 | [Huawei Noah's Ark Lab](https://github.com/huawei-noah/CV-Backbones) | 2019 | 753× more params |
-| LeNet-5 | 60,000 | Classic CNN | 98.77% | ~15 min | 1,646 | [Paper](http://yann.lecun.com/exdb/lenet/) | 1998 | Original CNN |
+| **MultiBranchNet V1** | **7,210** | 6 parallel branches | **98.56%** | 11m 36s | **⭐ 13.67** | This repo | 2025 | **Best efficiency!** |
+| **MultiBranchNet V2 (best @epoch 47)** | **6,855** | 6→3 structured | **98.57%** | 17m 29s | **⭐ 14.38** | This repo | 2025 | **Most flexible!** |
+| LeNet-5 | 60,000 | Classic CNN | 98.77% | ~15 min | 1.65 | [Paper](http://yann.lecun.com/exdb/lenet/) | 1998 | Original CNN |
+| Simple CNN | 1,199,882 | Conv+FC | 99.25% | ~20 min | 0.08 | [PyTorch Tutorial](https://github.com/pytorch/examples/tree/main/mnist) | - | PyTorch official |
+| ResNet-18 (adapted) | 11,180,000 | Deep residual | 99.54% | ~45 min | 0.01 | [torchvision](https://github.com/pytorch/vision) | 2015 | Overkill for MNIST |
+| VGG-like CNN | 3,274,634 | Deep CNN | 99.31% | ~35 min | 0.03 | [eriklindernoren/ML-From-Scratch](https://github.com/eriklindernoren/ML-From-Scratch) | - | 454× more params |
+| MobileNetV2-tiny | 15,000 | Depthwise separable | 98.90% | ~18 min | 6.59 | [PyTorch Hub](https://pytorch.org/hub/) | 2018 | 2.2× more params |
+| MLP-Mixer (tiny) | 324,234 | Token-mixing | 98.45% | ~18 min | 0.30 | [PyTorch Hub](https://pytorch.org/hub/) | 2021 | 47× more params |
+| Custom CNN (Kaggle) | 431,080 | Conv+FC | 99.12% | ~35 min | 0.23 | [Kaggle](https://www.kaggle.com/competitions/digit-recognizer) | - | 59× more params |
+| GhostNet | 5,180,840 | Depthwise separable | 99.01% | ~35 min | 0.02 | [Huawei Noah's Ark Lab](https://github.com/huawei-noah/CV-Backbones) | 2019 | 753× more params |
+| LeNet-5 | 60,000 | Classic CNN | 98.77% | ~15 min | 1.65 | [Paper](http://yann.lecun.com/exdb/lenet/) | 1998 | Original CNN |
 
 #### **📊 Architecture Categories:**
 
@@ -96,18 +96,20 @@ This table compares MultiBranchNet with various implementations from the GitHub 
 
 | Rank | Model | Efficiency Score | Params | Accuracy |
 |------|-------|-----------------|--------|----------|
-| 🥇 | **MultiBranchNet V2** | **14,379** | 6,855 | 98.57% |
-| 🥈 | **MultiBranchNet V1** | **13,672** | 7,210 | 98.56% |
-| 🥉 | **MicroNet** | 1,096 | 8,934 | 97.91% |
-| 4 | **Basic MLP** | 978 | 100,000 | 97.80% |
-| 5 | **TinyNet** | 765 | 12,842 | 98.23% |
-| 6 | **MobileNetV2-tiny** | 659 | 15,000 | 98.90% |
-| 7 | **MLP-Mixer (tiny)** | 304 | 324,234 | 98.45% |
-| 8 | **Custom CNN (Kaggle)** | 230 | 431,080 | 99.12% |
-| 9 | **GhostNet** | 191 | 5,180,840 | 99.01% |
-| 10 | **LeNet-5** | 1,646 | 60,000 | 98.77% |
+| 🥇 | **MultiBranchNet V2** | **14.38** | 6,855 | 98.57% |
+| 🥈 | **MultiBranchNet V1** | **13.67** | 7,210 | 98.56% |
+| 🥉 | **MicroNet** | **10.96** | 8,934 | 97.91% |
+| 4 | **TinyNet** | **7.65** | 12,842 | 98.23% |
+| 5 | **MobileNetV2-tiny** | **6.59** | 15,000 | 98.90% |
+| 6 | **LeNet-5** | **1.65** | 60,000 | 98.77% |
+| 7 | **Basic MLP** | **0.98** | 100,000 | 97.80% |
+| 8 | **MLP-Mixer (tiny)** | **0.30** | 324,234 | 98.45% |
+| 9 | **Custom CNN (Kaggle)** | **0.23** | 431,080 | 99.12% |
+| 10 | **VGG-like CNN** | **0.03** | 3,274,634 | 99.31% |
 
-**🎖️ MultiBranchNet dominates the efficiency rankings by 12-14×!**
+**🎖️ MultiBranchNet dominates the efficiency rankings!**
+
+*Efficiency Score = (Test Accuracy × 1000) / Parameters*
 
 ---
 
